@@ -119,19 +119,48 @@ This project addresses hospital 30-day readmission penalty risks and inpatient c
 4. **Microsoft Excel 2019+**
 
 ### Step 1: Clone the Repository
-```bash
-https://github.com/Leiyangamba/Diabetic-Patient-Readmission-Risk-Analytics-Pipeline.git
+```
+ git clone https://github.com/Leiyangamba/Diabetic-Patient-Readmission-Risk-Analytics-Pipeline.git
 cd Diabetic-Patient-Readmission-Risk-Analytics-Pipeline
-
+```
+### Step 2: Set Up Python Environment
+```
 pip install -r requirements.txt
-
+```
+### Step 3: Configure BigQuery
+```
 export GOOGLE_APPLICATION_CREDENTIALS="path/to/service-account-key.json"
-
+```
+### Step 4: Run ETL Pipeline
+```
 python python_etl/03_bigquery_upload.py
-
+```
+### Step 5: Create BigQuery Views
+```
 -- Run all view creation scripts in order
--- Execute: bigquery_views/create_views_master.sql
+```
+---
+### Step 6: Open Excel KPI Workbook
+Open excel_kpi/diabetes_kpi.xlsx
+Check 00_Data_Validation sheet for PASS status
 
+### Step 7: Open Power BI Dashboard
+on progress
 
+------
+### Contributing
+Contributions are welcome! Please read the contribution guidelines before submitting a pull request.
+1.Fork the repository
+2.Create your feature branch: git checkout -b feature/amazing-feature
+3.Commit your changes: git commit -m 'Add amazing feature'
+4.Push to the branch: git push origin feature/amazing-feature
+5.Open a Pull Request
+
+### License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+### Acknowledgments
+UCI Machine Learning Repository for the Diabetes 130-US Hospitals dataset
+CMS for providing the readmission benchmark standards
 
 
