@@ -123,6 +123,14 @@ This project addresses hospital 30-day readmission penalty risks and inpatient c
 https://github.com/Leiyangamba/Diabetic-Patient-Readmission-Risk-Analytics-Pipeline.git
 cd Diabetic-Patient-Readmission-Risk-Analytics-Pipeline
 
+pip install -r requirements.txt
+
+export GOOGLE_APPLICATION_CREDENTIALS="path/to/service-account-key.json"
+
+python python_etl/03_bigquery_upload.py
+
+-- Run all view creation scripts in order
+-- Execute: bigquery_views/create_views_master.sql
 
 
 
